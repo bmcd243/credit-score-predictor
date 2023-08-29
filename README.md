@@ -1,7 +1,7 @@
 # credit-score-predictor
 Using the sklearn Random Forest Library, I have created a model that predicts whether a users Credit Score is 'Poor', 'Standard' or 'Good' using a dataset that I found on Kaggle.
 
-## Data pre-processing
+## Pre-processing
 This dataset was very messy, so a lot of cleaning needed to be done!
 
 I realised that I only needed to read in the training dataset at first, and then just apply all those same changes to the test set when I needed to test the model.
