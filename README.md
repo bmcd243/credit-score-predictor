@@ -15,15 +15,15 @@ To gain an overview of the dataset, I used 4 common commands:
 I also used `.isna().sum()` to count the number of NaN rows. For rows that had loads of NaN entries, I simply removed these from my analysis as they weren't of any use.
 
 Below are other rows that I removed along with reasoning:
-`ID`, `Customer_ID`, `Month`, `Name`, `SSN`, `Type_of_Loan`: removed not due to data issues, but because the features are not good predictors of someone's credit score
-`Monthly_Inhand_Salary`: 15002 NaN rows - `Annual_Income` is good enough
+1. `ID`, `Customer_ID`, `Month`, `Name`, `SSN`, `Type_of_Loan`: removed not due to data issues, but because the features are not good predictors of someone's credit score
+2. `Monthly_Inhand_Salary`: 15002 NaN rows - `Annual_Income` is good enough
 
 From a first glance, key issues that I noticed with entries in the CSV included underscores in numerical data which was easily fixed using `str.replace()`. Also, rows with negative values were removed as this is not possible, as well as duplicate rows.
 Another issue was pandas reading in the columns as incorrect data types, so I had to manually define each `dtype`.
 
 Some other basic amendments that I made to features:
-`Num_of_Delayed_Payment`: 7002 NaN rows, so I interpreted these as 0 delayed payments
-`Num_Credit_Inquiries`: same as above
+1. `Num_of_Delayed_Payment`: 7002 NaN rows, so I interpreted these as 0 delayed payments
+2. `Num_Credit_Inquiries`: same as above
 
 
 ### Converting non-numerical data to labels
